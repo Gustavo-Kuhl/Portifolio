@@ -12,10 +12,11 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   word-spacing: .2rem;
-  background: #171717;
+  background: #0c0c0f;
   overflow-x: hidden;
   position: relative;
   color: #fff;
+  scrollbar-color: #2cb67d;
 }
 
 a {
@@ -147,13 +148,31 @@ main #gustavo-kuhl .description a {
   padding: .5rem;
   margin-top: 1rem;
   color: #2cb67d;
+  border-radius: 5px;
   text-align: center;
   -webkit-transition: .3s;
   transition: .3s;
+  position: relative;
+}
+
+main #gustavo-kuhl .description a::before {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2cb67d;
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: -1;
+}
+
+main #gustavo-kuhl .description a:hover::before {
+  width: 100%;
 }
 
 main #gustavo-kuhl .description a:hover {
-  background-color: #2cb67d;
   color: #fff;
 }
 
@@ -212,7 +231,7 @@ main #about .about-contact .contact ul {
 }
 
 main #about .about-contact .contact li {
-  width: 18%;
+  width: 15%;
   display: inline-block;
   margin: 4rem;
 }
@@ -262,6 +281,7 @@ main #about .about-contact .contact li a div img {
 }
 
 main #skills {
+  background-color: #111116;
   margin-top: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,7 +315,7 @@ main #skills .skills-list li {
   display: flex;
   border-radius: 5px;
   list-style: none;
-  background-color: #222;
+  background-color: #0c0c0f;
   width: 260px;
   height: 260px;
   margin: 5rem;
@@ -325,7 +345,7 @@ main #skills #learning li {
   display: flex;
   border-radius: 5px;
   list-style: none;
-  background-color: #222;
+  background-color: #0c0c0f;
   width: 260px;
   height: 260px;
   margin: 5rem;
@@ -368,7 +388,7 @@ main #projects .projects-list ul {
 main #projects .projects-list li {
   width: 90%;
   margin: 1rem;
-  background-color: #222;
+  background-color: #111116;
   border-radius: 5px;
   text-align: center;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);

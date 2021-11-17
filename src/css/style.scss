@@ -1,5 +1,6 @@
 // GLOBAL ====================================
 $primary-color: #2cb67d;
+$second-color: #0c0c0f;
 * {
     margin: 0;
     padding: 0;
@@ -13,10 +14,11 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     word-spacing: .2rem;
-    background: #171717;
+    background: $second-color;
     overflow-x: hidden;
     position: relative;
     color: #fff;
+    scrollbar-color: $primary-color;
 }
 
 a {
@@ -109,6 +111,7 @@ main {
     #gustavo-kuhl {
         margin-top: 10%;
         display: flex;
+
         .programming-logo {
             width: 40%;
             img {
@@ -139,11 +142,28 @@ main {
                 padding: .5rem;
                 margin-top: 1rem;
                 color: $primary-color;
+                border-radius: 5px;
                 text-align: center;
                 transition: .3s;
-
-                &:hover {
+                position: relative;
+                
+                &::before {
+                    content: '';
+                    width: 0;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                     background-color: $primary-color;
+                    transition: .4s;
+                    z-index: -1;
+                }
+                
+                &:hover::before {
+                    width: 100%;
+                }
+                
+                &:hover {
                     color: #fff;
                 }
             }
@@ -181,7 +201,7 @@ main {
                 }
 
                 li {
-                    width: 18%;
+                    width: 15%;
                     display: inline-block;
                     margin: 4rem;
 
@@ -219,6 +239,7 @@ main {
     }
 
     #skills {
+        background-color: #111116;
         margin-top: 10%;
         display: flex;
         flex-direction: column;
@@ -237,7 +258,7 @@ main {
                 display: flex;
                 border-radius: 5px;
                 list-style: none;
-                background-color: #222;
+                background-color: $second-color;
                 width: 260px;
                 height: 260px;
                 margin: 5rem;
@@ -263,7 +284,7 @@ main {
                 display: flex;
                 border-radius: 5px;
                 list-style: none;
-                background-color: #222;
+                background-color: $second-color;
                 width: 260px;
                 height: 260px;
                 margin: 5rem;
@@ -294,7 +315,7 @@ main {
             li {
                 width: 90%;
                 margin: 1rem;
-                background-color: #222;
+                background-color: #111116;
                 border-radius: 5px;
                 text-align: center;
                 box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);

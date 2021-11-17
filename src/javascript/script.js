@@ -1,39 +1,18 @@
-const projectsModal = {
-    showModal() {
-
-        const images = document.querySelectorAll('#projects img')
-        const modal = document.querySelector('#modal')
-        const modalDisplay = document.querySelector('.modal-display')
-
-        images.forEach(image => {
-            image.addEventListener('click', () => {
-                modal.classList.add('active')
-                modalDisplay.appendChild('')
-            })
-        })
-
-    },
-
-    closeModal() {
-
-        const close = document.querySelector('.modal-display span')
-        const modal = document.querySelector('#modal')
-
-        close.addEventListener('click', () => {
-            modal.classList.remove('active')
-        })
-
-    }
-}
-
 function app() {
+
+    ScrollReveal().reveal('#gustavo-kuhl', {
+        delay: 400,
+        origin: 'right',
+        reset: false,
+        distance: '20%'
+    })
 
     ScrollReveal().reveal('#about', {
         delay: 400,
         duration: 400,
         distance: '10%',
         origin: "top",
-        reset: true
+        reset: false
     })
     
     ScrollReveal().reveal('#skills', {
@@ -41,7 +20,7 @@ function app() {
         distance: '10%',
         duration: 400,
         origin: "top",
-        reset: true
+        reset:false
     })
     
     ScrollReveal().reveal('#projects', {
@@ -49,7 +28,7 @@ function app() {
         distance: '20%',
         duration: 600,
         origin: "left",
-        reset: true
+        reset: false
     })
 
 }
