@@ -90,11 +90,6 @@ header #menu li a:hover::before {
   width: 100%;
 }
 
-main {
-  display: -ms-grid;
-  display: grid;
-}
-
 main section {
   width: 100%;
   margin-top: 15%;
@@ -111,6 +106,9 @@ main section {
 
 main #gustavo-kuhl {
   margin-top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main #gustavo-kuhl .programming-logo {
@@ -122,6 +120,7 @@ main #gustavo-kuhl .programming-logo img {
 }
 
 main #gustavo-kuhl .description {
+  width: 40%;
   -webkit-box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
   border-radius: 5px 100px;
@@ -133,7 +132,6 @@ main #gustavo-kuhl .description {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 30%;
 }
 
 main #gustavo-kuhl .description h3 {
@@ -190,7 +188,8 @@ main #about .about-me {
 }
 
 main #about .about-me p {
-  width: 50%;
+  width: 70%;
+  text-align: center;
   padding: 2rem;
 }
 
@@ -283,6 +282,11 @@ main #skills .skills-list ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main #skills .skills-list li {
@@ -353,19 +357,29 @@ main #projects .projects-list {
 }
 
 main #projects .projects-list ul {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main #projects .projects-list li {
-  width: 500px;
-  height: 350px;
+  width: 90%;
   margin: 1rem;
   background-color: #222;
   border-radius: 5px;
   text-align: center;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main #projects .projects-list li:hover {
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
 }
 
 main #projects .projects-list li img {
@@ -376,10 +390,12 @@ main #projects .projects-list li img {
 }
 
 main #projects .projects-list li p {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.507);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.507);
   padding: .5rem;
   margin: 1rem;
+  color: #c7c7c7;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .modal-display {
@@ -425,10 +441,43 @@ main #projects .projects-list li p {
 
 footer {
   margin-top: 10%;
-  font-family: 'Press Start 2P';
-  font-size: .8rem;
   text-align: center;
   background-color: #2cb67d;
   padding: 2rem;
+}
+
+@media (max-width: 1574px) {
+  .projects-list ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .projects-list li {
+    width: 100%;
+  }
+  .projects-list li img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #gustavo-kuhl {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #gustavo-kuhl .description {
+    width: 80% !important;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #menu {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

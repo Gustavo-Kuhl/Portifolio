@@ -26,22 +26,19 @@ const projectsModal = {
     }
 }
 
-projectsModal.showModal()
-projectsModal.closeModal()
-
 function app() {
 
     ScrollReveal().reveal('#about', {
         delay: 400,
         duration: 400,
-        distance: '30%',
+        distance: '10%',
         origin: "top",
         reset: true
     })
     
     ScrollReveal().reveal('#skills', {
         delay: 500,
-        distance: '30%',
+        distance: '10%',
         duration: 400,
         origin: "top",
         reset: true
@@ -49,9 +46,9 @@ function app() {
     
     ScrollReveal().reveal('#projects', {
         delay: 500,
-        distance: '30%',
+        distance: '20%',
         duration: 600,
-        origin: "top",
+        origin: "left",
         reset: true
     })
 

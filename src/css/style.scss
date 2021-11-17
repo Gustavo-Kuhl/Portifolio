@@ -48,12 +48,7 @@ ul {
     list-style: none;
 }
 
-// MIXINS =====================================
-@mixin flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 // HEADER ======================================
 header {
@@ -101,7 +96,6 @@ header {
 
 // MAIN ========================================
 main {
-    display: grid;
 
     section {
         width: 100%;
@@ -114,6 +108,7 @@ main {
 
     #gustavo-kuhl {
         margin-top: 10%;
+        display: flex;
         .programming-logo {
             width: 40%;
             img {
@@ -123,13 +118,12 @@ main {
         
 
         .description {
-            box-shadow:
-             3px 0 5px rgba(0, 0, 0, 0.5);
+            width: 40%;
+            box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
             border-radius: 5px 100px;
             padding: 3rem;
             display: flex;
             flex-direction: column;
-            width: 30%;
 
 
             h3 {
@@ -169,7 +163,8 @@ main {
             flex-direction: column;
 
             p {
-                width: 50%;
+                width: 70%;
+                text-align: center;
                 padding: 2rem;
             }
         }
@@ -234,6 +229,8 @@ main {
 
             ul {
                 display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             li {
@@ -290,17 +287,22 @@ main {
             padding: 1rem;
 
             ul {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                display: flex;
+                justify-content: center;
             }
 
             li {
-                width: 500px;
-                height: 350px;
+                width: 90%;
                 margin: 1rem;
                 background-color: #222;
                 border-radius: 5px;
                 text-align: center;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                transition: .3s;
+
+                &:hover {
+                    transform: scale(105%);
+                }
 
                 img {
                     width: 100%;
@@ -310,9 +312,11 @@ main {
                 }
 
                 p {
-                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.507);
                     padding: .5rem;
                     margin: 1rem;
+                    color: #c7c7c7;
+                    border-radius: 5px;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
                 }
             }
         }
@@ -359,9 +363,43 @@ main {
 
 footer {
     margin-top: 10%;
-    font-family: 'Press Start 2P';
-    font-size: .8rem;
     text-align: center;
     background-color: $primary-color;
     padding: 2rem;
+}
+
+// media queries ================================
+@media (max-width: 1574px) {   
+    .projects-list {
+        ul {
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        li {
+            width: 100%;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    #gustavo-kuhl {
+        flex-direction: column-reverse;
+
+        .description {
+            width: 80% !important; 
+            margin-top: 4rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+
+    #menu {
+        display: none;
+    }
+
 }
