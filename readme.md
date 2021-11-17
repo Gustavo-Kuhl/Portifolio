@@ -8,7 +8,7 @@
 
 ![PortifolioPicture](./src/assets/portifolioPicture.png)
 
-<h4 align="center"><a href="">Clique para visitar o projeto</a></h4>
+<h4 align="center"><a href="https://gustavo-kuhl.github.io/Portifolio/src/html/index.html">Clique para visitar o projeto</a></h4>
 
 ## 💼 Tecnologias utilizadas
 Para o desenvolvimento deste site utilizei as seguintes tecnologias:
