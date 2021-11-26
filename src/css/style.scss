@@ -108,6 +108,7 @@ main {
         align-items: center;
     }
 
+    // first section => cv topic
     #gustavo-kuhl {
         margin-top: 10%;
         display: flex;
@@ -170,6 +171,7 @@ main {
         }
     }
 
+    // second section => contact and about-me topic
     #about {
         margin-top: 15%;
         display: flex;
@@ -238,6 +240,7 @@ main {
         }
     }
 
+    // third section => what I know and what I'm learning
     #skills {
         background-color: #111116;
         margin-top: 10%;
@@ -299,6 +302,7 @@ main {
         }
     }
     
+    // last section => projects that I created and what I'm about to develop
     #projects {
         display: flex;
         flex-direction: column;
@@ -382,6 +386,7 @@ main {
     }
 }
 
+// FOOTER =======================================
 footer {
     margin-top: 10%;
     text-align: center;
